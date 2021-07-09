@@ -10,3 +10,5 @@ class smartphone {
 
   makePhoneCall(): void {}
 }
+
+const mi10 = new smartphone("black", "xiaomi");
