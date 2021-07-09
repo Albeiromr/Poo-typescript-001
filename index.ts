@@ -15,8 +15,12 @@ class smartphone {
     this.battery -= 10;
   }
 
-  get batteryLevel(): number {
+  public get batteryLevel(): number {
       return this.battery;
+  }
+
+  public set rechargeBattery(amountToRecharge: number){
+    this.battery += amountToRecharge
   }
 
 }
@@ -32,7 +36,8 @@ mi10.makePhoneCall();
 mi10.makePhoneCall();
 mi10.makePhoneCall();
 mi10.makePhoneCall();
-mi10.makePhoneCall();
-mi10.makePhoneCall();
+
+mi10.rechargeBattery = 13;
+console.log(mi10.batteryLevel);
 
 
