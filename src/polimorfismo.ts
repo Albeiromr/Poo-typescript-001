@@ -2,24 +2,27 @@
 //es crear una subclase que herede sus métodos y estado y luego instanciar
 //esa subclase
 
+interface extraInfo {
+   phoneNumber: string;
+}
+
 abstract class User {
-  private profession: string;
+    private profession: string;
+    
+    constructor(profession:string){
+        this.profession = profession;
+    }
 
-  constructor(profession: string) {
-    this.profession = profession;
-  }
-
-  goToWork(): void {}
-}
-
-class Doctor extends User {
-    constructor(){
-        super("Doctor");
+    goToWork(){
+        console.log(`the ${this.profession} has got to work`)
     }
 }
 
-class Police extends User {
-    constructor(){
+class Police extends User implements extraInfo {
+    
+    constructor(phoneNumber: string){
         super("Police");
+        this.phoneNumber = phoneNumber
     }
+    phoneNumber: string
 }
