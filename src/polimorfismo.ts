@@ -26,3 +26,5 @@ class Police extends User implements extraInfo {
     }
     phoneNumber: string
 }
+
+
